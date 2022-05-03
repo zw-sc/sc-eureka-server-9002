@@ -1,0 +1,16 @@
+#eureka server服务端口
+server:
+  port: 9002
+spring:
+  application:
+    name: sc-eureka-server
+eureka:
+  instance:
+    hostname: euk-server-2
+  client:
+    service-url:
+      defaultZone: http://euk-server-1:9001/eureka
+    register-with-eureka: true
+    fetch-registry: true
+  dashboard:
+    enabled: true
